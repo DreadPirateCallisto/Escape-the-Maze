@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3uix73tblwiq"]
+
+[ext_resource type="Texture2D" uid="uid://bx6xch1ggq4lc" path="res://assets/doorGreen_lock.png" id="1_mp6wn"]
+[ext_resource type="Texture2D" uid="uid://d3kuefvjoxpta" path="res://assets/keyRed.png" id="2_g3s5p"]
+
+[node name="TileSet1" type="Node2D"]
+
+[node name="door_green" type="Sprite2D" parent="."]
+position = Vector2(32, 32)
+texture = ExtResource("1_mp6wn")
+region_rect = Rect2(384, 0, 64, 64)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="door_green"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="door_green/StaticBody2D"]
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[node name="door_red" type="Sprite2D" parent="."]
+position = Vector2(96, 96)
+texture = ExtResource("2_g3s5p")
+region_rect = Rect2(384, 0, 64, 64)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="door_red"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="door_red/StaticBody2D"]
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
